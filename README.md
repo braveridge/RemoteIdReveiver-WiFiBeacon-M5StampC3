@@ -1,5 +1,10 @@
 # WiFi Beacon リモートIDをM5Stamp C3で受信する
-Under Construction
+
+> Under Construction
+
+DJIなどWiFi BeaconのリモートIDをM5Stamp C3で受信してBLEでスマホなどに中継するファームウェアです。
+
+中継したリモートIDを[BvリモートID スマホアプリ](https://www.braveridge.com/product_support/remoteid/#app)で地図上に表示できる機能を開発中です。（アプリ内課金）
 
 ## データフロー
 ```mermaid
@@ -20,7 +25,7 @@ graph TD;
 #### USBドライバをインストールする
 - https://github.com/Xinyuan-LilyGO/LilyGo-T-Call-SIM800/files/7037260/CH9102_Mac_Driver.zip
 
-### M5StampC3へファームウェアを書き込む
+### ファームウェアをM5StampC3へ書き込む
 1. PCとM5StampC3をUSBで接続する
    - ターミナルで `% ls /dev|grep "tty.usbserial"` を実行して `tty.usbserial-XXX` と表示されることを確認する
 2. WiFiBeacon-RemoteIdReceiver-M5StampC3リポジトリをクローンまたはダウンロードする
@@ -44,3 +49,6 @@ graph TD;
 1. ドローン(e.g., DJI)を飛行させて、WiFi BeaconのリモートIDを発信させる
 2. [BvリモートID スマホアプリ](https://www.braveridge.com/product_support/remoteid/#app) から `M5StampC3受信機` に接続する
 3. RawDataロガーにリモートIDデータが表示されることを確認する
+
+## License
+[MIT license](./LICENSE)
