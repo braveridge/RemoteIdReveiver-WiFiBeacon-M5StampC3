@@ -50,5 +50,7 @@ graph TD;
 2. [BvリモートID スマホアプリ](https://www.braveridge.com/product_support/remoteid/#app) から `M5StampC3受信機` に接続する
 3. RawDataロガーにリモートIDデータが表示されることを確認する
 
+---
+
 ## License
 [MIT license](./LICENSE)
