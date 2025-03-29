@@ -59,15 +59,15 @@ void wifiReceiveCallback(void* buf, wifi_promiscuous_pkt_type_t type) {
 				// printf("Cpability = %04X\n", mac->capabilityInfo);		
 				// printf("Payload length = %d\n", len);
 
-				int notifyDataSize = elementData->length + 4;
+				int notifyDataSize = vi->length + 4;
 				uint8_t notifyData[notifyDataSize];
 
 				// data format
-				notifyData[0] = 0x01;	// notify data type for Bv RemoteID App
-				notifyData[1] = ppkt->rx_ctrl.channel;	// wifi channel
-				notifyData[2] = ppkt->rx_ctrl.rssi;		// wifi rssi
-				notifyData[3] = elementData->length;	// rid data length
-				memcpy(notifyData + 4, elementData->payload, elementData->length);	// rid data
+				notifyData[0] = 0x01;								// notify data type for Bv RemoteID App
+				notifyData[1] = ppkt->rx_ctrl.channel;				// wifi channel
+				notifyData[2] = ppkt->rx_ctrl.rssi;					// wifi rssi
+				notifyData[3] = vi->length;							// rid data length
+				memcpy(notifyData + 4, vi->payload, vi->length);	// rid data
 
 				printf("\n");
 				printf("notify data : ");
