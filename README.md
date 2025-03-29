@@ -42,5 +42,5 @@ graph TD;
 > ※開発中
 
 1. ドローン(e.g., DJI)を飛行させて、WiFi BeaconのリモートIDを発信させる
-2. [BvリモートID スマホアプリ](hhttps://www.braveridge.com/product_support/remoteid/#app) から `M5StampC3受信機` に接続する
+2. [BvリモートID スマホアプリ](https://www.braveridge.com/product_support/remoteid/#app) から `M5StampC3受信機` に接続する
 3. RawDataロガーにリモートIDデータが表示されることを確認する
