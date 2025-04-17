@@ -59,7 +59,7 @@ void wifiReceiveCallback(void* buf, wifi_promiscuous_pkt_type_t type) {
 				// printf("Cpability = %04X\n", mac->capabilityInfo);		
 				// printf("Payload length = %d\n", len);
 
-				int notifyDataSize = vi->length + 9;
+				int notifyDataSize = vi->length + 4;
 				uint8_t notifyData[notifyDataSize];
 
 				// data format
@@ -68,8 +68,8 @@ void wifiReceiveCallback(void* buf, wifi_promiscuous_pkt_type_t type) {
 				notifyData[2] = ppkt->rx_ctrl.rssi;					// wifi rssi
 				notifyData[3] = vi->length;							// rid data length
 				memcpy(notifyData + 4, vi->vendor_oui, 3);			// vendor oui
-				notifyData[8] = vi->vendor_oui_type;				// vendor oui type			
-				memcpy(notifyData + 9, vi->payload, vi->length + 1);// payload
+				notifyData[7] = vi->vendor_oui_type;				// vendor oui type			
+				memcpy(notifyData + 8, vi->payload, vi->length - 4);// payload
 
 				printf("\n");
 				printf("notify data : ");
