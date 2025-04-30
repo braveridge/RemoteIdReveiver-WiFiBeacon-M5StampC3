@@ -2,7 +2,7 @@
 
 > Under Construction
 
-DJIなどWiFi BeaconのリモートIDをM5Stamp C3で受信してBLEでスマホなどに中継するファームウェアです。
+DJIなどWiFi BeaconのリモートIDをM5Stamp C3(K056)で受信してBLEでスマホなどに中継するファームウェアです。
 
 中継したリモートIDを[BvリモートID スマホアプリ](https://www.braveridge.com/product_support/remoteid/#app)で地図上に表示できる機能を開発中です。（アプリ内課金）
 
